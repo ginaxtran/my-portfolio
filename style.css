@@ -106,7 +106,8 @@ ul li a:hover {
 
 .section__about h1,
 .section__skills h1,
-.section_experiences h1 {
+.section_experiences h1,
+.section__portfolio h1 {
   text-align: center;
   font-size: 50px;
   color: rgb(43, 39, 39);
@@ -276,6 +277,102 @@ ul li a:hover {
 
 }
 
+/* Portfolio */
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 36px;
+  margin-top: 24px;
+  padding: 50px;
+}
+
+.section__portfolio{
+  margin-top:50px;
+}
+
+.bottom-row {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center; 
+  gap: 36px; 
+}
+
+
+.button__1 {
+  background-color: #5d86b1;
+  color: white;
+  width: 150px;
+  height: 30px;
+  font-family: "Poppins", sans-serif;
+  border-radius: 10px;
+  border: none;
+  display: block;
+  margin: 20px auto 0 auto;
+
+}
+
+.project__1,
+.project__2,
+.project__3,
+.project__4,
+.project__5{
+  width: 575px;
+  min-height: 550px;
+  height: auto;
+  background-color: rgb(232, 236, 242);
+  border-radius: 25px;
+}
+
+.project__4,
+.project__5{
+  width: 575px;
+  min-height: 500px;
+  height: auto;
+  background-color: rgb(232, 236, 242);;
+}
+
+
+.project__1 img,
+.project__2 img,
+.project__3 img,
+.project__4 img,
+.project__5 img{
+  width:350px;
+  height:300px;
+  border-radius: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:20px;
+}
+
+.project__1 h3,
+.project__2 h3,
+.project__3 h3,
+.project__4 h3,
+.project__5 h3{
+  color:#58545b;
+  text-align: center;
+}
+
+.project__1 p,
+.project__2 p,
+.project__3 p,
+.project__4 p,
+.project__5 p {
+  color:#6b7280;
+  text-align: center;
+  margin-bottom:15px;
+  padding: 10px;
+}
+
+.section__portfolio > .project__4,
+.section__portfolio > .project__5 {
+  grid-column: span 1;
+}
+
 .images__row{
   display: flex;
   justify-content: center;
@@ -405,6 +502,37 @@ ul li a:hover {
     text-align: center;
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .portfolio {
+    grid-template-columns: 1fr;   
+    justify-items: center;       
+    gap: 12px;                
+    padding: 20px;               
+  }
+
+  .project__1,
+  .project__2,
+  .project__3{
+    width: 90vw;                
+    max-width: 400px;           
+    height: 600px;
+
+  }
+
+  .project__4,
+  .project__5 {
+    width: 90vw;                
+    max-width: 400px;           
+    height: 600px;
+    gap: 10px;
+  }
+
+  .bottom-row {
+    grid-column: 1 / -1;       
+    flex-direction: column;     
+    gap: 500px;                
+  }
+
 
   .image {
     grid-area: 1/1/2/2;
