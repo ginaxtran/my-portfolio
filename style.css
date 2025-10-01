@@ -557,6 +557,12 @@ ul li a:hover {
     gap: 15px;
   }
 
+  
+  .mini_hobbies {
+    display: flex;
+    flex-direction: column;
+  }
+
   .project img,
   .button__1,
   .button__2 {
