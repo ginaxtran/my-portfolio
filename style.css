@@ -512,7 +512,7 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-@media (min-width:200px) and (max-width: 415px) {
+@media (min-width:200px) {
 
   nav ul {
     display: none;
