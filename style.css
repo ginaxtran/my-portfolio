@@ -13,11 +13,6 @@ a {
 
 body {
   font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
-}
-
-.checkbox{
-  display: none;
 }
 
 nav {
@@ -29,6 +24,12 @@ nav {
   z-index: 99;
   min-height: 60px;
 }
+
+nav .checkbox {
+  display: none;
+}
+
+
 
 .nav__content {
   max-width: var(--max-width);
@@ -51,13 +52,10 @@ nav .logo a:hover {
   color: var(--primary-color-dark);
 }
 
-nav .checkbox {
-  display: none;
-}
-
 nav input {
   display: none;
 }
+
 nav .checkbox i {
   font-size: 2rem;
   color: var(--primary-color);
@@ -514,7 +512,7 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-@media (min-width:200px) and (max-width: 420px) {
+@media (min-width:200px) and (max-width: 415px) {
 
   nav ul {
     display: none;
@@ -578,6 +576,7 @@ ul li a:hover {
   .project {
     width: 100%;
     max-width: 100%;
+    align-items: center;
   }
 
   .project:nth-child(1),
@@ -596,75 +595,136 @@ ul li a:hover {
 
   @media (min-width: 415px) and (max-width: 750px) {
 
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: #292F36;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  #check:checked ~ ul {
+    display: flex;
+  }
+
+  label.checkbox {
+    display: block;
+    cursor: pointer;
+  }
+
+  nav input[type="checkbox"] {
+    display:none;
+  }
+
+  .image {
+    padding-top:150px;
+  }
+
+  .section__container {
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .content {
+    align-items: center; 
+  }
+
+  .image img {
+    width: 70%; 
+    max-width: 300px;
+    height: auto;
+  }
+
+  .section__hobbies {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section__hobbies p {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images__row,
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .__portfolio {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    gap: 15px;
+    padding: 10px;
+    margin-right: auto;          
+    margin-left: auto;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .project:nth-child(1),
+  .project:nth-child(2),
+  .project:nth-child(3),
+  .project:nth-child(4),
+  .project:nth-child(5) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-width: auto !important;
+    max-height: none !important;
+    margin: 10px 0 !important;
+  }
+
+  .button__1,
+  .button__2 {
+    width: 80%;
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+
+  .images__row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .content {
+    margin: auto;
+  }
+}
+
+  @media (min-width: 756px) {
     nav ul {
-      display: none;
-      flex-direction: column;
-      background-color: #292F36;
-      position: absolute;
-      width: 100%;
-      left: 0;
-      padding: 20px;
-      gap: 3rem;
-      margin: 0;
-      list-style: none;
+      display: flex;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      height: auto;
+      padding: 0;
+      background: none;
+      gap: 1rem;
     }
 
     .checkbox {
-      display: block;
-      cursor: pointer;
-      font-size: 2rem;
-      color: white;
-    }
-
-    #check:checked ~ ul {
-    display: flex;
-    }
-
-    .section__container {
-      grid-template-columns: 1fr; 
-      gap: 2rem;
-      text-align: center;
-    }
-
-    .content {
-      align-items: center; 
-    }
-
-    .image img {
-      width: 70%; 
-      max-width: 300px;
-      height: auto;
-    }
-
-    .section__hobbies {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    .__portfolio {
-      grid-template-columns: 1fr;
-      gap: 20px;
-      padding: 10px;
-    }
-
-    .project img {
-      width: 90%;
-    }
-
-    .button__1,
-    .button__2 {
-      width: 80%;
-    }
-
-    .image {
-      grid-area: 1/1/2/2;
-    }
-
-    .action__btns {
-      margin: auto;
+      display: none;
     }
 
     .images__row {
@@ -673,45 +733,25 @@ ul li a:hover {
       gap: 15px;
     }
 
+    .images__row > div {
+      width: 50%;
+    }
+
+    .__portfolio {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .section__hobbies,
+    .images__row {
+      flex-direction: row;
+      align-items: flex-start;
+      margin: 0;
+      text-align: left;
+      gap: 30px;
+    }
+
     .content {
-      margin: auto;
+      flex-direction: left;
+      align-items: left;
     }
   }
-
-@media (min-width: 751px) {
-
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    background: none;
-    gap: 1rem;
-  }
-
-  .checkbox {
-    display: none;
-  }
-
-  .__portfolio {
-    grid-template-columns: 2fr 1fr 1fr;
-  }
-
-
-  .section__hobbies,
-  .images__row {
-    flex-direction: row;
-    align-items: flex-start;
-    margin: 0;
-    text-align: left;
-    gap: 30px;
-  }
-
-  .content {
-    flex-direction: left;
-    align-items: left;
-  }
-
-}
