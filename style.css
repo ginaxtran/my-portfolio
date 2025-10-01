@@ -593,7 +593,7 @@ ul li a:hover {
 
 }
 
-  @media (min-width: 415px) and (max-width: 750px) {
+  @media (min-width: 320px) and (max-width: 750px) {
 
   nav ul {
     display: none;
