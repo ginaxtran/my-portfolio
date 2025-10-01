@@ -750,8 +750,7 @@ ul li a:hover {
       grid-template-columns: 2fr 1fr 1fr;
     }
 
-    .section__hobbies,
-    .images__row {
+    .section__hobbies{
       flex-direction: row;
       align-items: flex-start;
       margin: 0;
@@ -759,3 +758,10 @@ ul li a:hover {
       gap: 30px;
     }
   }
+
+ @media screen and (min-width:900px) {
+  .image-row img {
+    flex: 1 0 30%;
+    max-width: 30%;
+  }
+ }
