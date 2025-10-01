@@ -89,6 +89,7 @@ ul li a:hover {
 
 .section {
   background-color: var(--extra-light);
+  scroll-margin-top: 80px;
 }
 
 .section__container {
@@ -125,7 +126,7 @@ ul li a:hover {
 .section__portfolio h1,
 .section__contacts h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: rgb(43, 39, 39);
   margin-bottom: 20px;
 }
@@ -254,13 +255,11 @@ ul li a:hover {
   align-items: center;     
   text-align: center;      
   max-width: 250px;
-  margin-left: 60px;
 }
 
 .research_left img,
 .data_left img,
 .product_left img {
-  width: 100%;
   max-width: 120px;
   border-radius: 8px;
   object-fit: cover;
@@ -275,6 +274,18 @@ ul li a:hover {
 .product_left h4 {
   margin: 5px 0;
   color: #4b505b;
+}
+
+.research_left h2,
+.data_left h2,
+.product_left h2 {
+  font-size: 20px;
+}
+
+.research_left h4,
+.data_left h4,
+.product_left h4 {
+  font-size: 15px;
 }
 
 .research_right,
@@ -295,82 +306,93 @@ ul li a:hover {
 
 /* Portfolio */
 
+.section__portfolio {
+  padding: 40px;
+}
+
 .__portfolio {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr; /* wide left column, two smaller right columns */
-  grid-template-rows: 1fr 1fr; /* two rows for right side */
+  grid-template-columns: 1fr 1fr;   
+  grid-template-rows: auto auto;   
   gap: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
   padding: 20px;
-  box-sizing: border-box;
-  max-width: 900px; /* Restrict overall container width */
-  max-height: 100%;
-  margin: 0 auto;   /* Center container */
-  padding: 10px;
-  box-sizing: border-box;
 }
 
-.project:nth-child(1){
-  grid-column: 1 / 2;
-  grid-row: 1 / 3; /* spans both rows vertically */
+.project:nth-child(1) {
+  grid-column: 1 / 3; 
+  grid-row: 1;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
 }
+
 
 .project:nth-child(2) {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2; 
+  grid-column: 1;
+  grid-row: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  
 }
 
 .project:nth-child(3) {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-}
-
-.project:nth-child(4) {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.project:nth-child(5) {
-  grid-column: 3 / 4;
-  grid-row: 2 / 3;
-
-}
-.project {
-  background-color: rgb(230, 227, 227);
-  border: 2px solid black;
-  border-radius: 15px;
+  grid-column: 2;
+  grid-row: 2;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  padding: 20px;
-  box-sizing: border-box;
-  max-width: 100%;
-  min-height: 150px;
+  justify-content: center; 
 }
 
-.project:nth-child(1) img{
-  min-width: 300px;  
-  min-height: 100px;  
-  object-fit: cover; 
-  border-radius: 10px; 
+.project{
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  border-style: solid;
+  border-color: #292F36;
+  padding: 10px;
+  border-radius: 10px;
+  background-color:#d7d7d7;
 }
 
 .project img {
-  max-width: 100%;
+  max-width: 200px;
   height: auto;
   border-radius: 10px;
   margin-bottom: 15px;
 }
 
-
-.project h3 {
-  margin-bottom: 10px; 
+.project h3{
+ margin-bottom: 10px;
+ color: #4b505b;
+ text-align: center;
 }
 
+.project p{
+  color:#4b505b;
+  margin-bottom: 10px;
+  font-size: 13px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.project button, 
+.project a {
+  align-self: center; 
+  margin-top: auto;  
+}
+
+.project h3,
 .project p {
-  margin-bottom: 20px; 
-  font-size: 15px;
+  margin: 0.5rem 0;
 }
 
 .button {
@@ -382,7 +404,6 @@ ul li a:hover {
   font-family: "Poppins", sans-serif;
   border-radius: 10px;
   border: none;
-  margin-top: auto; 
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -390,8 +411,6 @@ ul li a:hover {
 .button:hover {
   background-color: #6b7280;
 }
-
-
 
 .images__row{
   display: flex;
@@ -484,7 +503,10 @@ ul li a:hover {
 
 .image {
   display: grid;
-  place-items: center;
+  justify-items: center;
+  align-items: start;
+  overflow: visible; 
+  height: auto; 
 }
 
 .image img {
@@ -492,17 +514,15 @@ ul li a:hover {
   border-radius: 100%;
 }
 
-@media (min-width:320px) and (max-width: 420px) {
+@media (min-width:200px) and (max-width: 420px) {
 
   nav ul {
     display: none;
     flex-direction: column;
-    background-color: #292F36;
+    background-color:transparent;
     position: absolute;
     width: 100%;
-    top: 60px;
     left: 0;
-    padding: 20px;
     gap: 3rem;
     margin: 0;
     list-style: none;
@@ -519,7 +539,16 @@ ul li a:hover {
   display: flex;
   }
 
-  .section__hobbies,
+  .image {
+    padding-top: 100px;
+    margin-top: 0;
+  }
+
+  .image img{
+    width: 250px;
+    margin-top: 50px; 
+  }
+
   .images__row,
   .content {
     display: flex;
@@ -530,18 +559,39 @@ ul li a:hover {
     gap: 15px;
   }
 
-  .__portfolio {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 10px;
-  }
-
   .project img,
   .button__1,
   .button__2 {
     width: 90%;
   }
+
+  .__portfolio {
+    display: grid;
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto;
+    gap: 15px;
+    padding: 10px;
+    margin-right: auto;          
+    margin-left: auto;
+  }
+
+  .project {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project:nth-child(1),
+  .project:nth-child(2),
+  .project:nth-child(3),
+  .project:nth-child(4),
+  .project:nth-child(5) {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    min-width: auto !important;
+    max-height: none !important;
+    margin: 10px 0 !important;
+  }
+
 }
 
   @media (min-width: 415px) and (max-width: 750px) {
@@ -571,22 +621,21 @@ ul li a:hover {
     }
 
     .section__container {
-      grid-template-columns: 1fr; /* stack content + image */
+      grid-template-columns: 1fr; 
       gap: 2rem;
       text-align: center;
     }
 
     .content {
-      align-items: center; /* center text for mobile */
+      align-items: center; 
     }
 
     .image img {
-      width: 70%; /* or 100% depending on image size */
+      width: 70%; 
       max-width: 300px;
       height: auto;
     }
 
-    /* Responsive layout tweaks */
     .section__hobbies {
       display: flex;
       flex-direction: column;
@@ -652,13 +701,17 @@ ul li a:hover {
 
 
   .section__hobbies,
-  .images__row,
-  .content {
+  .images__row {
     flex-direction: row;
     align-items: flex-start;
     margin: 0;
     text-align: left;
     gap: 30px;
+  }
+
+  .content {
+    flex-direction: left;
+    align-items: left;
   }
 
 }
