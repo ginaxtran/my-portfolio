@@ -409,7 +409,7 @@ ul li a:hover {
 }
 
 .images__row{
-  display: flex;
+  display:flex;
   justify-content: center;
   flex-direction: row;   
   gap: 75px;
@@ -725,9 +725,9 @@ ul li a:hover {
       display: none;
     }
 
-  .images__row {
-    flex-direction: row; 
-    align-items: flex-start;
+  .image-row img {
+    flex: 1 0 30%;
+    max-width: 30%;
   }
   .image img {
     min-width: 400px;
@@ -760,8 +760,17 @@ ul li a:hover {
   }
 
  @media screen and (min-width:900px) {
+
+  .images__row{
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;   
+    gap: 75px;
+    margin-top: 50px;              
+  }
+
   .image-row img {
-    flex: 1 0 30%;
+    flex: 1 1 30%;
     max-width: 30%;
   }
  }
