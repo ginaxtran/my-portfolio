@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="style.css" />
+  <script src="main.js" defer></script>
   <title>Gina Tran</title>
   <link rel="icon" href="images/logo.png">
 </head>
@@ -39,8 +40,8 @@
           I'm <span>Gina Tran<br /></span>
         </h1>
         <p class="description">
-          Passionate full-stack Data Scientist with a strong drive to create impactful,
-          innovative solutions that inspire meaningful change.
+          Passionate Business Intelligence, Data Analyst, and Data Scientist skilled in leading data projects, 
+          creating innovative solutions, and delivering impactful insights.
         </p>
         <div class="social-icons">
           <a href="https://github.com/ginaxtran" target="_blank"><i class="fab fa-github"></i></a>
@@ -198,10 +199,18 @@
   <div class ="section_portfolio">
     <h1>Portfolio</h1>
   </div>
-
-<!--The Little Prince-->
-  <div class = "container">
-    <div class="card">
+  <div class="filter">
+    <p>Filter</p>
+  </div>
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="data">Data Science/ML</button>
+    <button class="filter-btn" data-filter="bi">Business Intelligence/Data Visualization</button>
+    <button class="filter-btn" data-filter="web">Full-Stack/Web Development</button>
+  </div>
+ 
+  <div class="container">
+    <div class="card" data-category="data">
       <div class="half-card"></div>
         <div class="card-content">
           <h3>The Little Prince</h3>
@@ -220,12 +229,11 @@
           </button>
         </a>
       </div>
-    </div>
+  </div>
 
   <!--EmberGuard-->
-  <div class="card">
+  <div class="card" data-category="web">
     <div class="half-card"></div>
-
     <div class="card-content">
       <h3>EmberGuard</h3>
       <p>
@@ -246,7 +254,7 @@
   </div>
 
   <!--LinkedIin Integrety-->
-  <div class="card">
+  <div class="card" data-category="data">
     <div class="half-card"></div>
       <div class="card-content">
         <h3>LinkedIn Integrity</h3>
@@ -269,7 +277,7 @@
 
 
   <!--Seattle Animal Shelter-->
-  <div class="card">
+  <div class="card" data-category="bi">
     <div class="half-card"></div>
       <div class="card-content">
         <h3>Seattle Animal Shelter</h3>
@@ -289,8 +297,8 @@
     </div>
   </div>
 
-    <!--Seattle Collisions-->
-  <div class="card">
+  <!--Seattle Collisions-->
+  <div class="card" data-category="bi">
     <div class="half-card"></div>
       <div class="card-content">
         <h3>Seattle Collisions</h3>
@@ -306,6 +314,26 @@
       <a href="https://public.tableau.com/app/profile/gina4906/viz/SeattleCollisionsBaseProject_16675288541360/CollisionTypeWeatherBreakdown">
         <button class="button"><i class="fas fa-bar-chart"></i> Tableau</button>
       </a>
+    </div>
+    </div>
+
+  <!--Wine Analysis-->
+  <div class="card" data-category="bi">
+    <div class="half-card"></div>
+      <div class="card-content">
+        <h3>Wine Analysis</h3>
+        <p>
+          A dashboard visualization project to show sales of wine through revenue of years and brand names in Australia.
+        </p>
+        <div class="mini-cards">
+          <p>Tableau Public</p>
+          <p>Data Visualization</p>
+          <p>Dashboard Design</p>
+        </div>
+      <a href="https://public.tableau.com/app/profile/gina4906/viz/WineAnalysisDashboard/Dashboard1">
+        <button class="button"><i class="fas fa-bar-chart"></i> Tableau</button>
+      </a>
+    </div>
     </div>
   </div>
 </section>
