@@ -333,7 +333,7 @@ ul li a:hover {
 
 .filter-btn{
   font-family: "Poppins", sans-serif;  
-  background-color: #5b6770;           
+  background-color: #686f74;           
   color: white;                        
   padding: 8px 20px;
   cursor: pointer;
@@ -472,8 +472,13 @@ ul li a:hover {
 .arrow-btn.active i {
   transform: rotate(180deg);
 }
+
+#footer{
+  scroll-margin-top: 50px; 
+}
+
 footer {
-  background-color: #1a1a1a; /* Darker than portfolio for depth */
+  background-color: #1a1a1a; 
   padding: 60px 20px;
   color: white;
   text-align: center;
@@ -499,8 +504,8 @@ footer {
 }
 
 .social-icons a:hover {
-  color: #0077b5; /* LinkedIn Blue or your brand color */
-  transform: translateY(-5px); /* Lift effect */
+  color: #0077b5; 
+  transform: translateY(-5px); 
 }
 
 .footer-divider {
