@@ -242,9 +242,10 @@ ul li a:hover {
   margin-bottom: 50px;
   align-items: flex-start; 
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
+.graduate_left,
 .research_left,
 .data_left,
 .product_left {
@@ -252,9 +253,11 @@ ul li a:hover {
   flex-direction: column; 
   align-items: center;     
   text-align: center;      
-  max-width: 250px;
+  width: 250px;     
+  flex-shrink: 0;
 }
 
+.graduate_left img,
 .research_left img,
 .data_left img,
 .product_left img {
@@ -264,9 +267,11 @@ ul li a:hover {
   margin-bottom: 10px;
 }
 
+.graduate_left h2,
 .research_left h2,
 .data_left h2,
 .product_left h2,
+.graduate_left h4,
 .research_left h4,
 .data_left h4,
 .product_left h4 {
@@ -274,26 +279,32 @@ ul li a:hover {
   color: #4b505b;
 }
 
+.graduate_left h2,
 .research_left h2,
 .data_left h2,
 .product_left h2 {
   font-size: 20px;
 }
 
+.graduate_left h4,
 .research_left h4,
 .data_left h4,
 .product_left h4 {
   font-size: 15px;
 }
 
+.graduate_right,
 .research_right,
 .data_right,
 .product_right {
-  flex: 1; 
+  flex: 1;
+  min-width: 0;
   line-height: 1.6;
-  max-width:900px;
+  max-width: 900px;
+  margin-left: 0;
 }
 
+.graduate_right p,
 .research_right p,
 .data_right p,
 .product_right p {
