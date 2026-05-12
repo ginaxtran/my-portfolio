@@ -310,7 +310,18 @@ ul li a:hover {
 .product_right p {
     font-size: 18px;
     color: #58545b;
+}
 
+.paper-link {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 15px;
+  color: #0073b1;
+  text-decoration: none;
+}
+
+.paper-link:hover {
+  text-decoration: underline;
 }
 
 /* Portfolio */
